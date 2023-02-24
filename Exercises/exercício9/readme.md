@@ -2,6 +2,8 @@
 
 Lista de apresentação
 
+Link para o vídeo: https://drive.google.com/file/d/1POlcNEuSqJgOAWElyhPNcZp_KfjLiaOm/view?usp=sharing
+
 Nome: Mauro Artur Gomes de Oliveira
 Regras de código: Doom 3
 Exercício: 9 do LeetCode
