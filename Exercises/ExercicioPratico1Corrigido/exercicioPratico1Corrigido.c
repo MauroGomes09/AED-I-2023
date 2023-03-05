@@ -31,7 +31,7 @@ int main () {
     if ( result ) {
         printf( "O robo retornou a origem.\n" );
     } else {
-        printf( "O robo não retornou a origem.\n" );
+        printf( "O robo noo retornou a origem.\n" );
     }
     return 0;
 }
