@@ -39,7 +39,7 @@ bool isPalindrome(struct ListNode* head) {
 int main() {
     // Cria a lista encadeada
     struct ListNode *head = (struct ListNode*) malloc(sizeof(struct ListNode));
-    head->val = 1;
+    head->val = 2;
     head->next = (struct ListNode*) malloc(sizeof(struct ListNode));
     head->next->val = 2;
     head->next->next = (struct ListNode*) malloc(sizeof(struct ListNode));
@@ -52,9 +52,9 @@ int main() {
     
     // Verifica se a lista é um palíndromo
     if (isPalindrome(head)) {
-        printf("A lista é um palíndromo.\n");
+        printf("A lista e um palindromo.\n");
     } else {
-        printf("A lista não é um palíndromo.\n");
+        printf("A lista nao e um palindromo.\n");
     }
     
     // Libera a memória alocada pela lista encadeada
