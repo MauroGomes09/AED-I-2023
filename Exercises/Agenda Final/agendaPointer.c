@@ -24,15 +24,15 @@ int *frenteRecebe ( int *pBuffer, void *pawn ) { //pawn aponta para o que estava
 	if ( !pBuffer )
 		return pawn;
 
-	void *iniPerson = pawn;
+	void *iniPawn = pawn;
 
 	void **bufferBloco = (void*)&pBuffer;
 	pawn+=10*sizeof(char)+3*sizeof(int);
 
 	*(int *)pawn = (int)pBuffer; //pessoa que está sendo adicionada aponta para o que o buffer apontava
-	*(int*)(*bufferBloco+10*sizeof(char)+2*sizeof(int)) = (int)iniPerson; //o prev da pessoa que estava no buffer aponta para o que entrou
+	*(int*)(*bufferBloco+10*sizeof(char)+2*sizeof(int)) = (int)iniPawn; //o prev da pessoa que estava no buffer aponta para o que entrou
 
-	return iniPerson;
+	return iniPawn;
 }
 
 void list(int *pBuffer){
