@@ -1,6 +1,6 @@
 Lista de apresentação
 
-Link para o vídeo: https://drive.google.com/file/d/1f0tdxDWGOLI1tgOP43-98zrEdPhtUx0d/view?usp=share_link
+Link para o vídeo: https://drive.google.com/file/d/1f0tdxDWGOLI1tgOP43-98zrEdPhtUx0d/view?usp=sharing
 
 Nome: Mauro Artur Gomes de Oliveira 
 Regras de código: Doom 3 
