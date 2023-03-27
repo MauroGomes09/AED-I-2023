@@ -93,14 +93,14 @@ int *Push (int *pBuffer, void *pawn){
 			pawn += SIZE-2*sizeof(int);
 			*(int*)pawn = *(int*)prevPessoa;
 			pawn += sizeof(int);
-			*(int*)pawn = *(int*)bufferBloco;//o nó da frente da nova pessoa recebe a pessoa do buffer
+			*(int*)pawn = *(int*)bufferBloco; //o nó da frente da nova pessoa recebe a pessoa do buffer
 			
 			return start;
 		}
 
-		pBuffer = *(int**)(*bufferBloco+10*sizeof(char)+3*sizeof(int));//incrementa
+		pBuffer = *(int**)(*bufferBloco+10*sizeof(char)+3*sizeof(int)); //incrementa
 
-		if (!pBuffer){//se for a ultima pessoa
+		if (!pBuffer){ //se for a ultima pessoa
 			finalRecebe ( prev,pawn );
 			return start;
 		} 
@@ -109,7 +109,7 @@ int *Push (int *pBuffer, void *pawn){
 	return 0;
 }
 
-int *Pop ( int *pBuffer ) {//apaga o primeiro elemento pois segue as regras da fila
+int *Pop ( int *pBuffer ) { //apaga o primeiro elemento pois segue as regras da fila
 	void **bufferBloco = (void*)&pBuffer;
 	void *exc = pBuffer;
 
@@ -131,14 +131,14 @@ int *Pop ( int *pBuffer ) {//apaga o primeiro elemento pois segue as regras da f
 	return 0;
 }
 
-void finalRecebe(int *pBuffer, void *pawn){//faz o next da ultima receber pawn, e o prev de pawn receber essa ultima
+void finalRecebe(int *pBuffer, void *pawn){ //faz o next da ultima receber pawn, e o prev de pawn receber essa ultima
 	void **bufferBloco = (void*)&pBuffer;
 	int *nextLastPerson = (int*)(*bufferBloco+10*sizeof(char)+3*sizeof(int));
 	//.next da ultima pessoa do buffer
 
 	*nextLastPerson = (int)pawn;
-	pawn += SIZE-2*sizeof(int);//vai pro prev de pawn
-	*(int*)pawn = (int)(int*)(*bufferBloco);//faz ele receber a ultima pessoa q tava no buffer
+	pawn += SIZE-2*sizeof(int); //vai pro prev de pawn
+	*(int*)pawn = (int)(int*)(*bufferBloco); //faz ele receber a ultima pessoa q tava no buffer
 }
 
 int main() {
@@ -148,7 +148,7 @@ int main() {
 		printf ( "\n1 Adicionar bloco(info da pessoa)" );
         printf ( "\n2 Listar bloco com todas as pessoas" );
         printf ( "\n3 Remover bloco(info da pessoa)\n" );
-        printf ( "\nDigite qualquer valor para sair do menu e encerrar o programa\n" );
+        printf ( "\nDigite qualquer valor que nao esteja nas opcoes acima para sair do menu e encerrar o programa\n" );
         printf ( "-----------------------------------------------------------------" );
         printf ( "\nOpcao selecionada:" );
 		switch ( getchar() ) {
