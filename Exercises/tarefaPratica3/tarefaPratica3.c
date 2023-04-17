@@ -16,13 +16,13 @@ struct TreeNode *left;
 struct TreeNode *right;
 };
 
-int diameterOfBinaryTree(struct TreeNode* root){
-    if (root == NULL) return 0;
-    int leftHeight = diameterOfBinaryTree(root->left);
-    int rightHeight = diameterOfBinaryTree(root->right);
+int diameterOfBinaryTree ( struct TreeNode* root ) {
+    if ( root == NULL ) return 0;
+    int leftHeight = diameterOfBinaryTree ( root->left );
+    int rightHeight = diameterOfBinaryTree ( root->right );
     
      int maxHeight;
-    if (leftHeight > rightHeight) {
+    if ( leftHeight > rightHeight ) {
         maxHeight = leftHeight;
     } else {
         maxHeight = rightHeight;
@@ -34,11 +34,11 @@ int diameterOfBinaryTree(struct TreeNode* root){
 int main() {
     struct TreeNode* root = NULL;
 
-    root = insert(root, 1);
-    insert(root, 2);
-    insert(root, 3);
-    insert(root, 4);
-    insert(root, 5);
+    root = insert ( root, 1 );
+    insert ( root, 2 );
+    insert ( root, 3 );
+    insert ( root, 4 );
+    insert ( root, 5 );
 
     return 0;
 }
