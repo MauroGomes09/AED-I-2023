@@ -148,7 +148,7 @@ do {
     printf ( "3. Buscar pessoa\n" );
     printf ( "4. Listar pessoas\n" );
     printf ( "0. Sair\n" );
-    printf ( "Opção: " );
+    printf ( "Opçao: " );
     scanf ( "%d", &opcao );
 
     // Executa a operação escolhida pelo usuário
@@ -168,7 +168,7 @@ do {
         case 0:
             break;
         default:
-            printf ( "Opção inválida.\n" );
+            printf ( "Opçao invalida.\n" );
             break;
     }
 } while ( opcao != 0 );
