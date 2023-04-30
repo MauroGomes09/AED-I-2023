@@ -16,8 +16,6 @@ nele */
 #include <stdlib.h>
 #include <string.h>
 
-
-
 struct par {
     int indice;
     int valor;
@@ -48,8 +46,8 @@ int* maxSubsequence( int* nums, int numsSize, int k, int* returnSize ) {
 
 
 //Ordenação
-    qSort ( pairs,numsSize,sizeof(struct par),cmpParValor );
-    qSort ( pairs,k,sizeof(struct par),cmpParIndice );
+    qsort ( pairs,numsSize,sizeof(struct par),cmpParValor );
+    qsort ( pairs,k,sizeof(struct par),cmpParIndice );
     int * res = (int*)malloc(sizeof(int)*k);
 
 //Length K para definir o tamanho da matriz extraída
