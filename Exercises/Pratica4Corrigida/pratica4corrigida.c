@@ -21,21 +21,21 @@ struct par {
 };
 
 //Indice
-int cmpParIndice(const void* x, const void* y) {
-    const struct par* px = (const struct par*)x;
-    const struct par* py = (const struct par*)y;
+int cmpParIndice ( const void* x, const void* y ) {
+    const struct par* px = ( const struct par* )x;
+    const struct par* py = ( const struct par* )y;
     return px->indice - py->indice;
 }
 
 //Valor
-int cmpParValor(const void* x, const void* y) {
-    const struct par* px = (const struct par*)x;
-    const struct par* py = (const struct par*)y;
+int cmpParValor ( const void* x, const void* y ) {
+    const struct par* px = ( const struct par* )x;
+    const struct par* py = ( const struct par* )y;
     return py->valor - px->valor;
 }
 
 //Subsequência
-int* maxSubsequence(int* nums, int numsSize, int k, int* returnSize) {
+int* maxSubsequence ( int* nums, int numsSize, int k, int* returnSize ) {
     struct par* pairs = malloc(sizeof(struct par) * numsSize);
     for (int i = 0; i < numsSize; i++) {
         pairs[i].indice = i;
@@ -43,13 +43,13 @@ int* maxSubsequence(int* nums, int numsSize, int k, int* returnSize) {
     }
 
     //Ordenação
-    qsort(pairs, numsSize, sizeof(struct par), cmpParValor);
-    qsort(pairs, k, sizeof(struct par), cmpParIndice);
+    qsort ( pairs, numsSize, sizeof(struct par), cmpParValor );
+    qsort ( pairs, k, sizeof(struct par), cmpParIndice );
     int* res = malloc(sizeof(int) * k);
 
     //Length K para definir o tamanho da matriz extraída
     *returnSize = k;
-    for (int i = 0; i < k; i++) {
+    for ( int i = 0; i < k; i++ ) {
         res[i] = nums[pairs[i].indice];
     }
 
@@ -70,7 +70,7 @@ int main() {
     scanf ( "%d", &k );
     int returnSize = 0;
     int* res = maxSubsequence ( nums, numsSize, k, &returnSize );
-    printf ( "Subsequência de tamanho %d: ", k );
+    printf ( "Subsequencia de tamanho %d: ", k );
     for ( int i = 0; i < returnSize; i++ ) {
         printf ( "%d ", res[i] );
     }
